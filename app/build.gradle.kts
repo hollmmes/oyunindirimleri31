@@ -32,6 +32,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+
+
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -39,7 +41,9 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.androidx.media3.exoplayer.v140)
+    implementation(libs.androidx.media3.exoplayer.dash.v140)
+    implementation(libs.androidx.media3.ui.v140)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

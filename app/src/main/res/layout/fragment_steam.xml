@@ -3,14 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blueblack"
     tools:context=".SteamFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
         android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="300dp"
+        android:layout_gravity="top" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Image description"
-        android:scaleType="centerCrop"
-        android:src="@drawable/steam" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:padding="10dp"
+        app:cardCornerRadius="6dp"
+        app:cardBackgroundColor="@color/semiTransparentBlack"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/sale_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/nerko_one"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/countdown_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

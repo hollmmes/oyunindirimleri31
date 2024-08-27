@@ -11,4 +11,5 @@
     <color name="nav_bar_color">#0E0E18</color>
     <color name="active_color">#FFFFFFFF</color> <!-- Aktif durum için renk -->
     <color name="inactive_color">#9E9E9E</color> <!-- İnaktif durum için renk -->
+    <color name="semiTransparentBlack">#80000000</color>
 </resources>
