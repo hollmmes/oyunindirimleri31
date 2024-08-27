@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation("io.coil-kt:coil:2.0.0")
     implementation(libs.androidx.media3.exoplayer.v140)
     implementation(libs.androidx.media3.exoplayer.dash.v140)
     implementation(libs.androidx.media3.ui.v140)

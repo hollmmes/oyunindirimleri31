@@ -6,11 +6,13 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
+import coil.load
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.TimeUnit
@@ -53,6 +55,19 @@ class SteamFragment : Fragment() {
         // Set up the countdown timer
         countdownTimer = view.findViewById(R.id.countdown_timer)
         startCountdown()
+
+        // Load images into dashboard items
+        val imageView1: ImageView = view.findViewById(R.id.item_image_1)
+        val imageView2: ImageView = view.findViewById(R.id.item_image_2)
+        val imageView3: ImageView = view.findViewById(R.id.item_image_3)
+        val imageView4: ImageView = view.findViewById(R.id.item_image_4)
+        val imageView5: ImageView = view.findViewById(R.id.item_image_5)
+
+        imageView1.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/03c5ec0c9b15e4578ac5f9fd/spotlight_image_turkish.jpg?t=1724350351")
+        imageView2.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/c07f36e1ff40154a846a5219/spotlight_image_turkish.jpg?t=1724369721")
+        imageView3.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3050060/header_turkish.jpg?t=1724270597")
+        imageView4.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
+        imageView5.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/9d334a868bb389d555c00883/spotlight_image_turkish.jpg?t=1722883193")
 
         return view
     }
