@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_homeFragment_to_nullFragment"
             app:destination="@id/nullFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_freeFragment"
+            app:destination="@id/freeFragment" />
     </fragment>
     <fragment
         android:id="@+id/steamFragment"
@@ -69,6 +75,24 @@
         tools:layout="@layout/fragment_null" >
         <action
             android:id="@+id/action_nullFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.oyunindirimleri.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/freeFragment"
+        android:name="com.example.oyunindirimleri.FreeFragment"
+        android:label="fragment_free"
+        tools:layout="@layout/fragment_free" >
+        <action
+            android:id="@+id/action_freeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
