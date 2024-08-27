@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,49 +7,73 @@
     android:background="@color/blueblack"
     tools:context=".SteamFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bir sonraki büyük Festival"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="75dp"/>
+
     <androidx.media3.ui.PlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp" />
+        android:layout_height="250dp" >
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:padding="10dp"
-        app:cardCornerRadius="6dp"
-        app:cardBackgroundColor="@color/semiTransparentBlack"
-        app:cardElevation="4dp">
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            app:cardBackgroundColor="@color/semiTransparentBlack"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/sale_title"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:fontFamily="@font/nerko_one"
-                android:textAlignment="center"/>
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/countdown_timer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textAlignment="center"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/sale_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nerko_one"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
-    <HorizontalScrollView
+                <TextView
+                    android:id="@+id/countdown_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.media3.ui.PlayerView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aktif İndirimler"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <HorizontalScrollView
         android:id="@+id/dashboard_scroll"
         android:layout_width="match_parent"
         android:layout_height="160dp"
@@ -222,6 +246,453 @@
             <!-- Additional items can be added here -->
 
         </LinearLayout>
-    </HorizontalScrollView>
 
-</RelativeLayout>
+    </HorizontalScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İndirim Takvimi"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+    <ScrollView
+        android:id="@+id/vertical_dashboard_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_scroll"
+        android:layout_marginTop="16dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Vertical Dashboard Item 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_1"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Uzay Keşfi Festivali  2-9 EYLÜL 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_2"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Uçak Tren\nOtomobil Festivali  16-23 EYLÜL 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_3"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Tur Bazlı Strateji \nFestivali \n 30 EYLÜL - 7 EKİM 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_reklam1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_5"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Next (demo) Festiveli  \n 14-21 EKİM 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_6"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Cadılar Bayramı  \n 28 Ekim-4 Kasım 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_reklam2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_7"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Yemek Pişirme Festivali  \n 11-18 Kasım 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_8"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Sonbahar Festivali  \n 27 Kasım-4 Aralık 2024"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_9"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="Kış Festivali  \n 19 Aralık 2024 - 2 Ocak 2025"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/purple_700">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/semiTransparentBlack"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/vertical_item_image_reklam3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2024 Senesinin Sonu"
+                android:fontFamily="@font/nerko_one"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ฅ^•ﻌ•^ฅ Tufancan Demirkılıç ฅ^•ﻌ•^ฅ"
+                android:fontFamily="@font/nerko_one"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/year2025"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2025 İndirim Takvimi"
+                android:fontFamily="@font/nerko_one"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+        <ScrollView
+            android:id="@+id/vertical_dashboard_scroll2025"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/year2025"
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Vertical Dashboard Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_2025_1"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="Gerçek Zamanlı Strateji  2-9 EYLÜL 2024"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</ScrollView>
