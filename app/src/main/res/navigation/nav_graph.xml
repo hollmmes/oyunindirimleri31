@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.oyunindirimleri.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_steamFragment"
+            app:destination="@id/steamFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_epicFragment"
+            app:destination="@id/epicFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_psnFragment"
+            app:destination="@id/psnFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_xboxFragment"
+            app:destination="@id/xboxFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_nullFragment"
+            app:destination="@id/nullFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/steamFragment"
+        android:name="com.example.oyunindirimleri.SteamFragment"
+        android:label="fragment_steam"
+        tools:layout="@layout/fragment_steam" >
+        <action
+            android:id="@+id/action_steamFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/epicFragment"
+        android:name="com.example.oyunindirimleri.EpicFragment"
+        android:label="fragment_epic"
+        tools:layout="@layout/fragment_epic" >
+        <action
+            android:id="@+id/action_epicFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psnFragment"
+        android:name="com.example.oyunindirimleri.PsnFragment"
+        android:label="fragment_psn"
+        tools:layout="@layout/fragment_psn" >
+        <action
+            android:id="@+id/action_psnFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/xboxFragment"
+        android:name="com.example.oyunindirimleri.XboxFragment"
+        android:label="fragment_xbox"
+        tools:layout="@layout/fragment_xbox" >
+        <action
+            android:id="@+id/action_xboxFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nullFragment"
+        android:name="com.example.oyunindirimleri.nullFragment"
+        android:label="fragment_null"
+        tools:layout="@layout/fragment_null" >
+        <action
+            android:id="@+id/action_nullFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
