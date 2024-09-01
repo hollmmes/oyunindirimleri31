@@ -1,14 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FreeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blueblack"
+    tools:context=".ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ฅ^•ﻌ•^ฅ Ücretsiz Oyunlarฅ ^•ﻌ•^ฅ"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="75dp"/>
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                app:cardBackgroundColor="@color/semiTransparentBlack"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sale_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/countdown_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.media3.ui.PlayerView>
+
+
+        <ScrollView
+            android:id="@+id/vertical_dashboard_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dashboard_scroll"
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Vertical Dashboard Item 1 -->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_cekilis1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:scaleType="centerCrop"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ücretiz Oyunu Al"
+                            android:id="@+id/dogrula_button0"
+                            android:backgroundTint="@color/nav_bar_color"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/nerko_one"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_cekilis2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:scaleType="centerCrop"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ücretiz Oyunu Al"
+                            android:id="@+id/dogrula_button1"
+                            android:backgroundTint="@color/nav_bar_color"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/nerko_one"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ฅ^•ﻌ•^ฅ Tufancan Demirkılıç ฅ^•ﻌ•^ฅ"
+                    android:fontFamily="@font/nerko_one"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</ScrollView>
