@@ -1,15 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blueblack"
     tools:context=".XboxFragment">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="Image description"
-        android:scaleType="centerCrop"
-        android:src="@drawable/xbox" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bir sonraki büyük  Festival"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="75dp"/>
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                app:cardBackgroundColor="@color/semiTransparentBlack"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sale_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nerko_one"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/countdown_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.media3.ui.PlayerView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aktif İndirimler"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <HorizontalScrollView
+            android:id="@+id/dashboard_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/player_view"
+            android:layout_marginTop="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <!-- Dashboard Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item_image_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Item 1"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Dashboard Item 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item_image_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Item 2"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item_image_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Item 2"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item_image_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Item 2"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item_image_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Item 2"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Additional items can be added here -->
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İndirim Takvimi"
+            android:fontFamily="@font/nerko_one"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <ScrollView
+            android:id="@+id/vertical_dashboard_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dashboard_scroll"
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Vertical Dashboard Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_1"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="Cadılar Bayramı İndirimi \n2024 \n 18 Ekim – 1 Kasım"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_2"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="Kara Cuma İndirimi \n2024 \n 22 Kasım – 29 Kasım"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_3"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="Oyun Ödülleri İndirimi \n2024 \n 8 Aralık – 10 Aralık"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_reklam1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/vertical_item_image_5"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="Kış İndirimi\n 2024 \n 15 Aralık 2024 \n 5 Ocak 2025              "
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2024 Senesinin Sonu"
+                    android:fontFamily="@font/nerko_one"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ฅ^•ﻌ•^ฅ Tufancan Demirkılıç ฅ^•ﻌ•^ฅ"
+                    android:fontFamily="@font/nerko_one"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/year2025"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2025 İndirim Takvimi"
+                    android:fontFamily="@font/nerko_one"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -50,7 +50,7 @@ class SteamFragment : Fragment() {
 
         // Set the sale title text programmatically
         val saleTitle = view.findViewById<TextView>(R.id.sale_title)
-        saleTitle.text = "Son Bahar İndirimi\n 27 Kasım 2024"
+        saleTitle.text = "Çığlık Festivali İndirimi\n 28 Ekim 2024"
 
         // Set up the countdown timer
         countdownTimer = view.findViewById(R.id.countdown_timer)
@@ -98,16 +98,13 @@ class SteamFragment : Fragment() {
 
 
 
-        val ver_imageview31: ImageView = view.findViewById(R.id.vertical_item_image_2025_1)
-        ver_imageview31.load("https://steamdb.info/static/img/sales/generic.webp")
-
         return view
     }
 
     private fun startCountdown() {
         // Set the target date to 27 November 2024
         val targetDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-            .parse("2024-11-27 00:00:00")?.time ?: return
+            .parse("2024-10-29 19:00:00")?.time ?: return
 
         val currentTime = System.currentTimeMillis()
         val timeDifference = targetDate - currentTime
