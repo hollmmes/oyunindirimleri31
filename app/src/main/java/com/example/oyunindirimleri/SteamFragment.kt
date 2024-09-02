@@ -141,8 +141,28 @@ class SteamFragment : Fragment() {
                 nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
                 (nativeAdView1.bodyView as TextView).text = nativeAd.body
 
+                nativeAdView2.bodyView = nativeAdView2.findViewById(R.id.ad_body_alt2)
+                (nativeAdView2.bodyView as TextView).text = nativeAd.body
+
+                nativeAdView3.bodyView = nativeAdView3.findViewById(R.id.ad_body_alt3)
+                (nativeAdView3.bodyView as TextView).text = nativeAd.body
+
+
+
+
+
+
+
                 // Native reklamı yerleştirin
                 nativeAdView1.setNativeAd(nativeAd)
+                nativeAdView2.setNativeAd(nativeAd)
+                nativeAdView3.setNativeAd(nativeAd)
+                nativeAdView_yan1.setNativeAd(nativeAd)
+                nativeAdView_yan2.setNativeAd(nativeAd)
+
+
+
+
             }
             .build()
         adLoader.loadAd(AdRequest.Builder().build())
