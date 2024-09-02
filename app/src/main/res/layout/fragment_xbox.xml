@@ -111,17 +111,10 @@
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 1"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Dashboard Item 2 -->
+                <!-- reklam -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -136,19 +129,6 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <ImageView
-                            android:id="@+id/item_image_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 2"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -172,17 +152,10 @@
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 2"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
+                <!-- reklam -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -197,19 +170,7 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <ImageView
-                            android:id="@+id/item_image_4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 2"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -370,6 +331,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                <!-- reklam -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -384,12 +346,6 @@
                         android:orientation="horizontal"
                         android:background="@color/semiTransparentBlack"
                         android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/vertical_item_image_reklam1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
 
 
                     </LinearLayout>
@@ -426,6 +382,26 @@
                             android:text="Kış İndirimi\n 2024 \n 15 Aralık 2024 \n 5 Ocak 2025              "
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- reklam -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/semiTransparentBlack"
+                        android:gravity="center">
+
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

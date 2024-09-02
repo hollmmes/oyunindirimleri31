@@ -35,17 +35,19 @@ android {
 
 
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    implementation("io.coil-kt:coil:2.0.0")
+
+    implementation(libs.coil)
     implementation(libs.androidx.media3.exoplayer.v140)
     implementation(libs.androidx.media3.exoplayer.dash.v140)
     implementation(libs.androidx.media3.ui.v140)
-
+    implementation(libs.play.services.ads)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -56,4 +58,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }

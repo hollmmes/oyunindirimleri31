@@ -13,11 +13,22 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import coil.load
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.nativead.NativeAd
+import com.google.android.gms.ads.nativead.NativeAdView
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 class SteamFragment : Fragment() {
+
+    lateinit var mAdview : AdView
+    lateinit var mAdview2 : AdView
+    lateinit var mAdview3 : AdView
+    lateinit var mAdview4 : AdView
+
 
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
@@ -58,44 +69,97 @@ class SteamFragment : Fragment() {
 
         // Load images into dashboard items
         val imageView1: ImageView = view.findViewById(R.id.item_image_1)
-        val imageView2: ImageView = view.findViewById(R.id.item_image_2)
         val imageView3: ImageView = view.findViewById(R.id.item_image_3)
         val imageView4: ImageView = view.findViewById(R.id.item_image_4)
-        val imageView5: ImageView = view.findViewById(R.id.item_image_5)
-
-
 
         imageView1.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/03c5ec0c9b15e4578ac5f9fd/spotlight_image_turkish.jpg?t=1724350351")
-        imageView2.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/c07f36e1ff40154a846a5219/spotlight_image_turkish.jpg?t=1724369721")
         imageView3.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3050060/header_turkish.jpg?t=1724270597")
         imageView4.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
-        imageView5.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/9d334a868bb389d555c00883/spotlight_image_turkish.jpg?t=1722883193")
-
 
         val ver_imageview1: ImageView = view.findViewById(R.id.vertical_item_image_1)
         val ver_imageview2: ImageView = view.findViewById(R.id.vertical_item_image_2)
         val ver_imageview3: ImageView = view.findViewById(R.id.vertical_item_image_3)
-        val vertical_item_image_reklam1: ImageView = view.findViewById(R.id.vertical_item_image_reklam1)
         val ver_imageview5: ImageView = view.findViewById(R.id.vertical_item_image_5)
         val ver_imageview6: ImageView = view.findViewById(R.id.vertical_item_image_6)
-        val vertical_item_image_reklam2: ImageView = view.findViewById(R.id.vertical_item_image_reklam2)
         val ver_imageview7: ImageView = view.findViewById(R.id.vertical_item_image_7)
         val ver_imageview8: ImageView = view.findViewById(R.id.vertical_item_image_8)
         val ver_imageview9: ImageView = view.findViewById(R.id.vertical_item_image_9)
-        val vertical_item_image_reklam3: ImageView = view.findViewById(R.id.vertical_item_image_reklam3)
 
         ver_imageview1.load("https://steamdb.info/static/img/blog/1/52a8bb8666c98fba0dcfd318e455df3698778253.png")
         ver_imageview2.load("https://steamdb.info/static/img/blog/1/ee1b420a8fa47c8795e791a05c6c0056c0e569a6.png")
         ver_imageview3.load("https://steamdb.info/static/img/blog/1/103b4210791d88a2f39532cd8983880fa1c28e51.png")
-        vertical_item_image_reklam1.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
         ver_imageview5.load("https://clan.cloudflare.steamstatic.com/images/39049601/b19e87424a7474164d3f7fcc46763cfecf1ee78b.jpg")
         ver_imageview6.load("https://steamdb.info/static/img/sales/generic.webp")
-        vertical_item_image_reklam2.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
         ver_imageview7.load("https://steamdb.info/static/img/blog/1/9b17026346a121af8eed4240892392182d90b6cc.png")
         ver_imageview8.load("https://steamdb.info/static/img/sales/autumn.webp")
         ver_imageview9.load("https://steamdb.info/static/img/sales/winter.webp")
-        vertical_item_image_reklam3.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
 
+        // NativeAdView nesnesini bulun
+        val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
+        val nativeAdView2 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt2)
+        val nativeAdView3 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt3)
+        val nativeAdView_yan1 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan1)
+        val nativeAdView_yan2 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan2)
+        // AdLoader ile reklamı yükleyin
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+            .forNativeAd { nativeAd ->
+                // Reklamın başlığını ayarlayın
+                nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
+                (nativeAdView1.headlineView as TextView).text = nativeAd.headline
+
+                nativeAdView2.headlineView = nativeAdView2.findViewById(R.id.ad_headline_alt2)
+                (nativeAdView2.headlineView as TextView).text = nativeAd.headline
+
+                nativeAdView3.headlineView = nativeAdView3.findViewById(R.id.ad_headline_alt3)
+                (nativeAdView3.headlineView as TextView).text = nativeAd.headline
+
+                nativeAdView_yan1.headlineView = nativeAdView_yan1.findViewById(R.id.ad_headline_yan1)
+                (nativeAdView_yan1.headlineView as TextView).text = nativeAd.headline
+
+                nativeAdView_yan2.headlineView = nativeAdView_yan2.findViewById(R.id.ad_headline_yan2)
+                (nativeAdView_yan2.headlineView as TextView).text = nativeAd.headline
+
+
+
+                // Reklamın ikonunu ayarlayın
+                nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
+                nativeAdView2.iconView = nativeAdView2.findViewById(R.id.ad_app_icon_alt2)
+                nativeAdView3.iconView = nativeAdView3.findViewById(R.id.ad_app_icon_alt3)
+                nativeAdView_yan1.iconView = nativeAdView_yan1.findViewById(R.id.ad_app_icon_yan1)
+                nativeAdView_yan2.iconView = nativeAdView_yan2.findViewById(R.id.ad_app_icon_yan2)
+                if (nativeAd.icon != null) {
+                    (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+                    (nativeAdView2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+                    (nativeAdView3.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+                    (nativeAdView_yan1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+                    (nativeAdView_yan2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+
+
+                }
+
+                // Reklamın açıklamasını ayarlayın
+                nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
+                (nativeAdView1.bodyView as TextView).text = nativeAd.body
+
+                // Native reklamı yerleştirin
+                nativeAdView1.setNativeAd(nativeAd)
+            }
+            .build()
+        adLoader.loadAd(AdRequest.Builder().build())
+
+
+
+        mAdview = view.findViewById(R.id.adView)
+        mAdview2 = view.findViewById(R.id.adView1)
+        mAdview3 = view.findViewById(R.id.adView2)
+        mAdview4 = view.findViewById(R.id.adView3)
+
+
+        val adRequest = AdRequest.Builder().build()
+        mAdview.loadAd(adRequest)
+        mAdview2.loadAd(adRequest)
+        mAdview3.loadAd(adRequest)
+        mAdview4.loadAd(adRequest)
 
 
         return view

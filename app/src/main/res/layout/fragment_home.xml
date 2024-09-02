@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:background="@color/blueblack"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
@@ -132,12 +133,33 @@
                         android:gravity="center"
                         android:orientation="vertical" />
 
-                    <ImageView
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_alt1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="Image description"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/choose" />
+                        android:layout_height="match_parent">
+
+                        <!-- Reklam Başlığı -->
+                        <TextView
+                            android:id="@+id/ad_headline_alt1"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_alt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="centerCrop" />
+
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -204,5 +226,6 @@
             </GridLayout>
         </ScrollView>
     </HorizontalScrollView>
+
 
 </FrameLayout>

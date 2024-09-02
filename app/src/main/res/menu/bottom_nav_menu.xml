@@ -6,6 +6,11 @@
         android:title="Mağazalar" />
 
     <item
+        android:id="@+id/fab"
+        android:icon="@drawable/person"
+        android:title="Fırsatlar ve Bedava" />
+
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/person"
         android:title="Profil" />

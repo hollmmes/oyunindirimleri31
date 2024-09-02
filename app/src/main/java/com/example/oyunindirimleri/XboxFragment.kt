@@ -57,29 +57,23 @@ class XboxFragment : Fragment() {
 
         // Load images into dashboard items
         val imageView1: ImageView = view.findViewById(R.id.item_image_1)
-        val imageView2: ImageView = view.findViewById(R.id.item_image_2)
         val imageView3: ImageView = view.findViewById(R.id.item_image_3)
-        val imageView4: ImageView = view.findViewById(R.id.item_image_4)
         val imageView5: ImageView = view.findViewById(R.id.item_image_5)
 
 
         imageView1.load("https://assets.xboxservices.com/assets/61/06/6106552d-d867-42b9-8ec7-7f5fc3a2fd05.jpg?n=FY25UGS-ROW-Tile-1136x639-02.jpg")
-        imageView2.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
         imageView3.load("https://assets.xboxservices.com/assets/61/06/6106552d-d867-42b9-8ec7-7f5fc3a2fd05.jpg?n=FY25UGS-ROW-Tile-1136x639-02.jpg")
-        imageView4.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
         imageView5.load("https://assets.xboxservices.com/assets/61/06/6106552d-d867-42b9-8ec7-7f5fc3a2fd05.jpg?n=FY25UGS-ROW-Tile-1136x639-02.jpg")
 
 
         val ver_imageview1: ImageView = view.findViewById(R.id.vertical_item_image_1)
         val ver_imageview2: ImageView = view.findViewById(R.id.vertical_item_image_2)
         val ver_imageview3: ImageView = view.findViewById(R.id.vertical_item_image_3)
-        val vertical_item_image_reklam1: ImageView = view.findViewById(R.id.vertical_item_image_reklam1)
         val ver_imageview5: ImageView = view.findViewById(R.id.vertical_item_image_5)
 
         ver_imageview1.load("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/10/Xbox-Shocktober.jpg")
         ver_imageview2.load("https://www.merlininkazani.com/images/games/6793/114500_640.jpg")
         ver_imageview3.load("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/11/the-game-awards-xbox.jpg")
-        vertical_item_image_reklam1.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
         ver_imageview5.load("https://ukstories.microsoft.com/wp-content/uploads/2022/11/Xbox-holiday-image.jpeg")
 
 
