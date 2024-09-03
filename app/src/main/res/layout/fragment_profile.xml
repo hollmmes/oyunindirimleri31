@@ -74,6 +74,7 @@
 
 
         <TextView
+            android:background="@color/nav_bar_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Çekilişler"
@@ -127,10 +128,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
+                        android:background="@color/nav_bar_color"
                         android:gravity="center"
                         >
 
                         <EditText
+                            android:id="@+id/adrescekilis1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Size Ulaşabileceğimiz Adres"
@@ -245,6 +248,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:background="@color/nav_bar_color"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -252,6 +256,7 @@
                         >
 
                         <EditText
+                            android:id="@+id/adrescekilis2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="Size Ulaşabileceğimiz Adres"

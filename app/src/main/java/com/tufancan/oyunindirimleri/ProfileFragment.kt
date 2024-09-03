@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.media3.common.MediaItem
@@ -18,14 +19,20 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+import android.app.AlertDialog
+import android.widget.Toast
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.OnUserEarnedRewardListener
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 
 class ProfileFragment : Fragment() {
     lateinit var mAdview : AdView
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
-
     private lateinit var database: DatabaseReference
+
+    private var rewardedAd: RewardedAd? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -106,20 +113,97 @@ class ProfileFragment : Fragment() {
             .build()
         adLoader.loadAd(AdRequest.Builder().build())
 
-
-
         mAdview = view.findViewById(R.id.adView)
-
-
-
-
-
         val adRequest = AdRequest.Builder().build()
         mAdview.loadAd(adRequest)
+
+        // Load rewarded ad
+        loadRewardedAd()
+
+        // Set up dogrula_buton0 click event
+        val dogrulaButton0: Button = view.findViewById(R.id.dogrula_button0)
+        dogrulaButton0.setOnClickListener {
+            showRewardedAd()
+        }
+
+        // Set up dogrula_button1 click event
+        val dogrulaButton1: Button = view.findViewById(R.id.dogrula_button1)
+        dogrulaButton1.setOnClickListener {
+            showRewardedAd()
+        }
+
+        // Bildirimleri Aktifleştir butonunu bulun ve tıklama olayını ayarlayın
+        val bildirimButton: Button = view.findViewById(R.id.bildirim)
+        bildirimButton.setOnClickListener {
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setTitle("Bildirimleri Etkinleştirme")
+            builder.setMessage("Bildirimleri etkinleştirmek istiyor musunuz?")
+
+            builder.setPositiveButton("Evet") { dialog, _ ->
+                // Bildirimleri etkinleştirme kodu buraya gelecek
+                Toast.makeText(requireContext(), "Bildirimler etkinleştirildi", Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
+
+            builder.setNegativeButton("Hayır") { dialog, _ ->
+                dialog.dismiss() // Sadece dialogu kapat
+            }
+
+            builder.create().show()
+        }
 
         return view
     }
 
+    private fun loadRewardedAd() {
+        val adRequest = AdRequest.Builder().build()
+
+        RewardedAd.load(
+            requireContext(),
+            "ca-app-pub-4574441267168225/3835522081",
+            adRequest,
+            object : RewardedAdLoadCallback() {
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    rewardedAd = null
+                    Toast.makeText(requireContext(), "Failed to load rewarded ad", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onAdLoaded(ad: RewardedAd) {
+                    rewardedAd = ad
+                }
+            }
+        )
+    }
+
+    private fun showRewardedAd() {
+        rewardedAd?.let { ad ->
+            ad.show(requireActivity(), OnUserEarnedRewardListener {
+                // Handle the reward
+                Toast.makeText(requireContext(), "Çekilişe Katıldınız!", Toast.LENGTH_SHORT).show()
+                saveDataToFirebase()
+
+            })
+        } ?: Toast.makeText(requireContext(), "Lütfen reklamın tamamını izleyiniz.", Toast.LENGTH_SHORT).show()
+    }
+    private fun saveDataToFirebase() {
+        // Retrieve the values from adrescekilis1 and adrescekilis2 (assuming they are TextViews)
+        val adrescekilis1Text = view?.findViewById<TextView>(R.id.adrescekilis1)?.text.toString()
+        val adrescekilis2Text = view?.findViewById<TextView>(R.id.adrescekilis2)?.text.toString()
+
+        // Save the values to Firebase
+        val dataMap = mapOf(
+            "adrescekilis1" to adrescekilis1Text,
+            "adrescekilis2" to adrescekilis2Text
+        )
+
+        database.child("cekilisKatilim").push().setValue(dataMap)
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "Çekilişe katılım bilgileriniz kaydedildi!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Bilgiler kaydedilirken bir hata oluştu.", Toast.LENGTH_SHORT).show()
+            }
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         // Release the player when the view is destroyed
