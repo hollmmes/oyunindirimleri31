@@ -320,7 +320,7 @@
                         android:id="@+id/adView"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
-                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
 
                 </androidx.cardview.widget.CardView>
@@ -453,7 +453,7 @@
                         android:id="@+id/adView1"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
-                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
 
                 </androidx.cardview.widget.CardView>
@@ -556,7 +556,7 @@
                         android:id="@+id/adView2"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
-                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
 
                 </androidx.cardview.widget.CardView>

@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
         val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
 
         // AdLoader ile reklamı yükleyin
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-4574441267168225/5135327162")
             .forNativeAd { nativeAd ->
                 // Reklamın başlığını ayarlayın
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)

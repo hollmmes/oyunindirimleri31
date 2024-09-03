@@ -91,7 +91,7 @@ class XboxFragment : Fragment() {
         val nativeAdView_yan1 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan1)
         val nativeAdView_yan2 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan2)
         // AdLoader ile reklamı yükleyin
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-4574441267168225/5135327162")
             .forNativeAd { nativeAd ->
                 // Reklamın başlığını ayarlayın
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)

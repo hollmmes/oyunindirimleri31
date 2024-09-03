@@ -1,5 +1,6 @@
 package com.tufancan.oyunindirimleri
 
+import android.media.Image
 import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -17,6 +18,8 @@ import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.TimeUnit
@@ -27,7 +30,7 @@ class SteamFragment : Fragment() {
     lateinit var mAdview2 : AdView
     lateinit var mAdview3 : AdView
     lateinit var mAdview4 : AdView
-
+    private lateinit var database: DatabaseReference
 
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
@@ -66,14 +69,41 @@ class SteamFragment : Fragment() {
         countdownTimer = view.findViewById(R.id.countdown_timer)
         startCountdown()
 
+
+        database = FirebaseDatabase.getInstance().getReference("images")
         // Load images into dashboard items
         val imageView1: ImageView = view.findViewById(R.id.item_image_1)
+        val imageview2: ImageView = view.findViewById(R.id.item_image_2)
         val imageView3: ImageView = view.findViewById(R.id.item_image_3)
         val imageView4: ImageView = view.findViewById(R.id.item_image_4)
 
-        imageView1.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/spotlights/03c5ec0c9b15e4578ac5f9fd/spotlight_image_turkish.jpg?t=1724350351")
-        imageView3.load("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3050060/header_turkish.jpg?t=1724270597")
-        imageView4.load("https://i.ytimg.com/vi/XPQnwJBP5jw/hqdefault.jpg")
+        // Firebase'den URL'leri çekin ve ImageView'lere yükleyin
+        database.child("image1").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl1 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl1.isNullOrEmpty()) {
+                imageView1.load(imageUrl1)
+            }
+        }
+
+        database.child("image2").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl2 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl2.isNullOrEmpty()) {
+                imageview2.load(imageUrl2)
+            }
+        }
+        database.child("image3").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl1 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl1.isNullOrEmpty()) {
+                imageView3.load(imageUrl1)
+            }
+        }
+
+        database.child("image4").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl2 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl2.isNullOrEmpty()) {
+                imageView4.load(imageUrl2)
+            }
+        }
 
         val ver_imageview1: ImageView = view.findViewById(R.id.vertical_item_image_1)
         val ver_imageview2: ImageView = view.findViewById(R.id.vertical_item_image_2)
@@ -100,7 +130,7 @@ class SteamFragment : Fragment() {
         val nativeAdView_yan1 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan1)
         val nativeAdView_yan2 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan2)
         // AdLoader ile reklamı yükleyin
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-4574441267168225/5135327162")
             .forNativeAd { nativeAd ->
                 // Reklamın başlığını ayarlayın
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)

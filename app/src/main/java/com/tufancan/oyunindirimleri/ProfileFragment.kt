@@ -16,12 +16,16 @@ import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.nativead.NativeAdView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class ProfileFragment : Fragment() {
     lateinit var mAdview : AdView
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
+
+    private lateinit var database: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,29 +60,34 @@ class ProfileFragment : Fragment() {
         // Set up the countdown time
 
         // Load images into dashboard items
-
-
-
-
+        database = FirebaseDatabase.getInstance().getReference("cekiliyap")
 
         val vertical_item_image_cekilis1: ImageView = view.findViewById(R.id.vertical_item_image_cekilis1)
-        val vertical_item_image_cekisil2: ImageView = view.findViewById(R.id.vertical_item_image_cekilis2)
+        val vertical_item_image_cekilis2: ImageView = view.findViewById(R.id.vertical_item_image_cekilis2)
 
-        vertical_item_image_cekilis1.load("https://www.flow-tronic.com/news/giveaway-contest-for-the-10-years-of-the-raven-eye/@@images/image/mini")
-        vertical_item_image_cekisil2.load("https://www.flow-tronic.com/news/giveaway-contest-for-the-10-years-of-the-raven-eye/@@images/image/mini")
+        // Firebase'den URL'leri çekin ve ImageView'lere yükleyin
+        database.child("cekbakalim1").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl1 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl1.isNullOrEmpty()) {
+                vertical_item_image_cekilis1.load(imageUrl1)
+            }
+        }
 
+        database.child("cekbakalim2").get().addOnSuccessListener { dataSnapshot ->
+            val imageUrl2 = dataSnapshot.getValue(String::class.java)
+            if (!imageUrl2.isNullOrEmpty()) {
+                vertical_item_image_cekilis2.load(imageUrl2)
+            }
+        }
 
         // NativeAdView nesnesini bulun
         val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
         // AdLoader ile reklamı yükleyin
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-4574441267168225/5135327162")
             .forNativeAd { nativeAd ->
                 // Reklamın başlığını ayarlayın
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
                 (nativeAdView1.headlineView as TextView).text = nativeAd.headline
-
-
-
 
                 // Reklamın ikonunu ayarlayın
                 nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
@@ -87,25 +96,11 @@ class ProfileFragment : Fragment() {
                     (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
 
                 }
-
                 // Reklamın açıklamasını ayarlayın
                 nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
                 (nativeAdView1.bodyView as TextView).text = nativeAd.body
-
-
-
-
-
-
-
-
-
-
                 // Native reklamı yerleştirin
                 nativeAdView1.setNativeAd(nativeAd)
-
-
-
 
             }
             .build()
