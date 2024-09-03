@@ -97,7 +97,7 @@
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -128,7 +128,7 @@
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
                         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -166,7 +166,7 @@
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -197,7 +197,7 @@
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
                         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -236,7 +236,7 @@
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -293,7 +293,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -326,7 +326,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
 
                     <com.google.android.gms.ads.AdView
@@ -347,7 +347,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
                         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -396,7 +396,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -429,7 +429,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -462,7 +462,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
 
                     <com.google.android.gms.ads.AdView
@@ -482,7 +482,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
                         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -533,7 +533,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -566,7 +566,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
 
                     <com.google.android.gms.ads.AdView
@@ -587,7 +587,7 @@
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/purple_700">
+                    app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
                         xmlns:android="http://schemas.android.com/apk/res/android"

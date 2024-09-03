@@ -144,10 +144,12 @@
                             android:id="@+id/ad_headline_alt1"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
+                            android:textSize="12sp"/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
