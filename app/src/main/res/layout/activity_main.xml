@@ -15,19 +15,33 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
-    <TextView
-        android:id="@+id/headerTextView"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OYUN İNDİRİMLERİ"
-        android:textSize="50dp"
-        android:textColor="@android:color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:fontFamily="@font/nerko_one" />
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/headerImageView"
+            android:layout_width="64sp"
+            android:layout_height="64sp"
+            android:src="@drawable/backgroundlesslogo"
+            android:contentDescription="@string/todo"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/headerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OYUN İNDİRİMLERİ"
+            android:textSize="35sp"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/nerko_one"/>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

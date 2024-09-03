@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/fab"
-        android:icon="@drawable/person"
+        android:icon="@drawable/discount"
         android:title="Bedava Oyun" />
 
     <item
