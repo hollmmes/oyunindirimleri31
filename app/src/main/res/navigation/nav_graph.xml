@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.oyunindirimleri.HomeFragment"
+        android:name="com.tufancan.oyunindirimleri.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/steamFragment"
-        android:name="com.example.oyunindirimleri.SteamFragment"
+        android:name="com.tufancan.oyunindirimleri.SteamFragment"
         android:label="fragment_steam"
         tools:layout="@layout/fragment_steam" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/epicFragment"
-        android:name="com.example.oyunindirimleri.EpicFragment"
+        android:name="com.tufancan.oyunindirimleri.EpicFragment"
         android:label="fragment_epic"
         tools:layout="@layout/fragment_epic" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/psnFragment"
-        android:name="com.example.oyunindirimleri.PsnFragment"
+        android:name="com.tufancan.oyunindirimleri.PsnFragment"
         android:label="fragment_psn"
         tools:layout="@layout/fragment_psn" >
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/xboxFragment"
-        android:name="com.example.oyunindirimleri.XboxFragment"
+        android:name="com.tufancan.oyunindirimleri.XboxFragment"
         android:label="fragment_xbox"
         tools:layout="@layout/fragment_xbox" >
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/nullFragment"
-        android:name="com.example.oyunindirimleri.nullFragment"
+        android:name="com.tufancan.oyunindirimleri.nullFragment"
         android:label="fragment_null"
         tools:layout="@layout/fragment_null" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.oyunindirimleri.ProfileFragment"
+        android:name="com.tufancan.oyunindirimleri.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -88,7 +88,7 @@
     </fragment>
     <fragment
         android:id="@+id/freeFragment"
-        android:name="com.example.oyunindirimleri.FreeFragment"
+        android:name="com.tufancan.oyunindirimleri.FreeFragment"
         android:label="fragment_free"
         tools:layout="@layout/fragment_free" >
         <action

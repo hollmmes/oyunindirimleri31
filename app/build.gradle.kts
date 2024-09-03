@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.oyunindirimleri"
+    namespace = "com.tufancan.oyunindirimleri"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.oyunindirimleri"
+        applicationId = "com.tufancan.oyunindirimleri"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -42,7 +43,9 @@ android {
 }
 
 dependencies {
-
+    implementation (libs.google.firebase.analytics)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
     implementation(libs.coil)
     implementation(libs.androidx.media3.exoplayer.v140)
     implementation(libs.androidx.media3.exoplayer.dash.v140)
@@ -55,6 +58,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

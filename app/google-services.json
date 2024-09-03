@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "836686118226",
+    "firebase_url": "https://oyunindirimleri-1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "oyunindirimleri-1",
+    "storage_bucket": "oyunindirimleri-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836686118226:android:752ee17443070e7d968e8b",
+        "android_client_info": {
+          "package_name": "com.tufancan.oyunindirimleri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsDvF9ymcI6lXmo-ybV_ev1_VMF5v09xE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
