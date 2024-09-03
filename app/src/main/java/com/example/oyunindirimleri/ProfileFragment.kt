@@ -13,12 +13,17 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import coil.load
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.nativead.NativeAdView
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 
 class ProfileFragment : Fragment() {
+    lateinit var mAdview : AdView
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
 
@@ -66,6 +71,60 @@ class ProfileFragment : Fragment() {
         vertical_item_image_cekilis1.load("https://www.flow-tronic.com/news/giveaway-contest-for-the-10-years-of-the-raven-eye/@@images/image/mini")
         vertical_item_image_cekisil2.load("https://www.flow-tronic.com/news/giveaway-contest-for-the-10-years-of-the-raven-eye/@@images/image/mini")
 
+
+        // NativeAdView nesnesini bulun
+        val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
+        // AdLoader ile reklamı yükleyin
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+            .forNativeAd { nativeAd ->
+                // Reklamın başlığını ayarlayın
+                nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
+                (nativeAdView1.headlineView as TextView).text = nativeAd.headline
+
+
+
+
+                // Reklamın ikonunu ayarlayın
+                nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
+
+                if (nativeAd.icon != null) {
+                    (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+
+                }
+
+                // Reklamın açıklamasını ayarlayın
+                nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
+                (nativeAdView1.bodyView as TextView).text = nativeAd.body
+
+
+
+
+
+
+
+
+
+
+                // Native reklamı yerleştirin
+                nativeAdView1.setNativeAd(nativeAd)
+
+
+
+
+            }
+            .build()
+        adLoader.loadAd(AdRequest.Builder().build())
+
+
+
+        mAdview = view.findViewById(R.id.adView)
+
+
+
+
+
+        val adRequest = AdRequest.Builder().build()
+        mAdview.loadAd(adRequest)
 
         return view
     }

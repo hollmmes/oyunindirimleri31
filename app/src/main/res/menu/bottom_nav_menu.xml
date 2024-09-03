@@ -8,11 +8,11 @@
     <item
         android:id="@+id/fab"
         android:icon="@drawable/person"
-        android:title="Fırsatlar ve Bedava" />
+        android:title="Bedava Oyun" />
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/person"
-        android:title="Profil" />
+        android:title="Profil ve Çekiliş" />
 
 </menu>

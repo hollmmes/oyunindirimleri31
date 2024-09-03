@@ -130,26 +130,34 @@
                     app:cardElevation="8dp"
                     app:cardBackgroundColor="@color/purple_700">
 
-                    <LinearLayout
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_yan1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:layout_height="match_parent">
 
-                        <ImageView
-                            android:id="@+id/item_image_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
-
+                        <!-- Reklam Başlığı -->
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 2"
+                            android:id="@+id/ad_headline_yan1"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
-                    </LinearLayout>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_yan1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:scaleType="centerCrop" />
+
+
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -190,27 +198,34 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
                     app:cardBackgroundColor="@color/purple_700">
-
-                    <LinearLayout
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_yan2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:layout_height="match_parent">
 
-                        <ImageView
-                            android:id="@+id/item_image_4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
-
+                        <!-- Reklam Başlığı -->
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Item 2"
+                            android:id="@+id/ad_headline_yan2"
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
-                    </LinearLayout>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_yan2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:scaleType="centerCrop" />
+
+
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
                 </androidx.cardview.widget.CardView>
 
 
@@ -303,7 +318,74 @@
                             android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
 
+
+                    <com.google.android.gms.ads.AdView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView"
+                        android:layout_gravity="center"
+                        ads:adSize="BANNER"
+                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_alt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Reklam Başlığı -->
+                        <TextView
+                            android:id="@+id/ad_headline_alt1"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="100dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_alt1"
+                            android:layout_width="190dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="centerCrop" />
+
+                        <!-- Reklam Açıklaması -->
+                        <TextView
+                            android:id="@+id/ad_body_alt1"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
+                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
@@ -369,32 +451,74 @@
                             android:textSize="16sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="75dp"
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
                     app:cardBackgroundColor="@color/purple_700">
 
-                    <LinearLayout
+
+                    <com.google.android.gms.ads.AdView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:background="@color/semiTransparentBlack"
-                        android:gravity="center">
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView1"
+                        android:layout_gravity="center"
+                        ads:adSize="BANNER"
+                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        />
 
-                        <ImageView
-                            android:id="@+id/vertical_item_image_reklam1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"/>
-
-
-                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
 
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_alt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Reklam Başlığı -->
+                        <TextView
+                            android:id="@+id/ad_headline_alt2"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="100dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_alt2"
+                            android:layout_width="190dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="centerCrop" />
+
+                        <!-- Reklam Açıklaması -->
+                        <TextView
+                            android:id="@+id/ad_body_alt2"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -430,7 +554,75 @@
                 </androidx.cardview.widget.CardView>
 
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
 
+
+                    <com.google.android.gms.ads.AdView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView2"
+                        android:layout_gravity="center"
+                        ads:adSize="BANNER"
+                        ads:adUnitId= "ca-app-pub-3940256099942544/9214589741"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <com.google.android.gms.ads.nativead.NativeAdView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/native_ad_view_alt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- Reklam Başlığı -->
+                        <TextView
+                            android:id="@+id/ad_headline_alt3"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="100dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+
+                        <!-- Reklam İkonu -->
+                        <ImageView
+                            android:id="@+id/ad_app_icon_alt3"
+                            android:layout_width="190dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="centerCrop" />
+
+                        <!-- Reklam Açıklaması -->
+                        <TextView
+                            android:id="@+id/ad_body_alt3"
+                            android:layout_width="200dp"
+                            android:fontFamily="@font/nerko_one"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp" />
+
+                        <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
+                    </com.google.android.gms.ads.nativead.NativeAdView>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="match_parent"

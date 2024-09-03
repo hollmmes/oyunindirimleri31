@@ -12,9 +12,18 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import coil.load
+import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.nativead.NativeAdView
 
 
 class FreeFragment : Fragment() {
+    lateinit var mAdview : AdView
+    lateinit var mAdview2 : AdView
+    lateinit var mAdview3 : AdView
+    lateinit var mAdview4 : AdView
+
     private var player: ExoPlayer? = null
     private lateinit var countdownTimer: TextView
 
@@ -62,7 +71,71 @@ class FreeFragment : Fragment() {
         vertical_item_image_cekilis1.load("https://cdn-ext.fanatical.com/production/product/1280x720/fd51a206-6b70-4f80-a37a-284dc5070978.jpg")
         vertical_item_image_cekisil2.load("https://www.operationsports.com/wp-content/uploads/2023/08/wild-card-football.png?fit=1200%2C620")
 
+        // NativeAdView nesnesini bulun
+        val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
+        val nativeAdView2 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt2)
+        // AdLoader ile reklamı yükleyin
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+            .forNativeAd { nativeAd ->
+                // Reklamın başlığını ayarlayın
+                nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
+                (nativeAdView1.headlineView as TextView).text = nativeAd.headline
 
+                nativeAdView2.headlineView = nativeAdView2.findViewById(R.id.ad_headline_alt2)
+                (nativeAdView2.headlineView as TextView).text = nativeAd.headline
+
+
+
+                // Reklamın ikonunu ayarlayın
+                nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
+                nativeAdView2.iconView = nativeAdView2.findViewById(R.id.ad_app_icon_alt2)
+
+                if (nativeAd.icon != null) {
+                    (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+                    (nativeAdView2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
+
+
+
+                }
+
+                // Reklamın açıklamasını ayarlayın
+                nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
+                (nativeAdView1.bodyView as TextView).text = nativeAd.body
+
+                nativeAdView2.bodyView = nativeAdView2.findViewById(R.id.ad_body_alt2)
+                (nativeAdView2.bodyView as TextView).text = nativeAd.body
+
+
+
+
+
+
+
+
+
+                // Native reklamı yerleştirin
+                nativeAdView1.setNativeAd(nativeAd)
+                nativeAdView2.setNativeAd(nativeAd)
+
+
+
+            }
+            .build()
+        adLoader.loadAd(AdRequest.Builder().build())
+
+
+
+        mAdview = view.findViewById(R.id.adView)
+        mAdview3 = view.findViewById(R.id.adView1)
+        mAdview2 = view.findViewById(R.id.adView2)
+
+
+
+
+        val adRequest = AdRequest.Builder().build()
+        mAdview.loadAd(adRequest)
+        mAdview2.loadAd(adRequest)
+        mAdview3.loadAd(adRequest)
         return view
     }
 
