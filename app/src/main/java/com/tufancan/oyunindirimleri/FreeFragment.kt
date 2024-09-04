@@ -117,6 +117,7 @@ class FreeFragment : Fragment() {
             }
             .build()
         adLoader.loadAd(AdRequest.Builder().build())
+
         mAdview = view.findViewById(R.id.adView)
         mAdview3 = view.findViewById(R.id.adView1)
         mAdview2 = view.findViewById(R.id.adView2)
@@ -125,6 +126,8 @@ class FreeFragment : Fragment() {
         mAdview2.loadAd(adRequest)
         mAdview3.loadAd(adRequest)
         return view
+
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

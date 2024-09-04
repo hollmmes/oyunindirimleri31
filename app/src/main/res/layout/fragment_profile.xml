@@ -174,10 +174,10 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="16dp"
                     app:cardElevation="8dp"
                     app:cardBackgroundColor="@color/nav_bar_color">
 
@@ -190,31 +190,29 @@
                         <!-- Reklam Başlığı -->
                         <TextView
                             android:id="@+id/ad_headline_alt1"
-                            android:layout_width="200dp"
+                            android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginStart="100dp"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
+                            android:textSize="22sp"
+                            />
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt1"
-                            android:layout_width="190dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="10dp"
-                            android:scaleType="centerCrop" />
+                            android:layout_width="160sp"
+                            android:layout_height="160sp"
+                            android:layout_gravity="bottom" />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt1"
-                            android:layout_width="200dp"
+                            android:layout_width="175dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="30sp"
                             android:fontFamily="@font/nerko_one"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginStart="100dp"
-                            android:layout_gravity="center"
                             android:textColor="@android:color/white"
                             android:textSize="16sp" />
 
