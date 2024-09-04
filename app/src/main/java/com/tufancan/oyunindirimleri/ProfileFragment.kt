@@ -117,18 +117,20 @@ class ProfileFragment : Fragment() {
         val adRequest = AdRequest.Builder().build()
         mAdview.loadAd(adRequest)
 
-        // Load rewarded ad
-        loadRewardedAd()
+
+
 
         // Set up dogrula_buton0 click event
         val dogrulaButton0: Button = view.findViewById(R.id.dogrula_button0)
         dogrulaButton0.setOnClickListener {
+            loadRewardedAd()
             showRewardedAd()
         }
 
         // Set up dogrula_button1 click event
         val dogrulaButton1: Button = view.findViewById(R.id.dogrula_button1)
         dogrulaButton1.setOnClickListener {
+            loadRewardedAd()
             showRewardedAd()
         }
 

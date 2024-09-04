@@ -136,22 +136,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <!-- Reklam Başlığı -->
-                        <TextView
-                            android:id="@+id/ad_headline_yan1"
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center_horizontal"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_yan1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="30dp"
                             android:scaleType="centerCrop" />
 
 
@@ -205,22 +195,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <!-- Reklam Başlığı -->
-                        <TextView
-                            android:id="@+id/ad_headline_yan2"
-                            android:layout_width="match_parent"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center_horizontal"
-                            android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
+
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="30dp"
                             android:scaleType="centerCrop" />
 
 
@@ -350,7 +331,6 @@
                     app:cardBackgroundColor="@color/nav_bar_color">
 
                     <com.google.android.gms.ads.nativead.NativeAdView
-                        xmlns:android="http://schemas.android.com/apk/res/android"
                         android:id="@+id/native_ad_view_alt1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -358,31 +338,31 @@
                         <!-- Reklam Başlığı -->
                         <TextView
                             android:id="@+id/ad_headline_alt1"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="wrap_content"
+                            android:layout_width="159dp"
+                            android:layout_height="37dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginStart="100dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt1"
-                            android:layout_width="190dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_width="190sp"
+                            android:layout_height="130sp"
+                            android:layout_margin="10dp"
                             android:scaleType="centerCrop" />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt1"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginStart="100dp"
+                            android:layout_width="141dp"
+                            android:layout_height="94dp"
                             android:layout_gravity="center"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
                             android:textSize="16sp" />
 
@@ -493,31 +473,31 @@
                         <!-- Reklam Başlığı -->
                         <TextView
                             android:id="@+id/ad_headline_alt2"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="wrap_content"
+                            android:layout_width="159dp"
+                            android:layout_height="37dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginStart="100dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt2"
-                            android:layout_width="190dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="10dp"
-                            android:scaleType="centerCrop" />
+                            android:layout_width="190sp"
+                            android:layout_height="130sp"
+                            android:layout_margin="10dp"
+                            android:scaleType="centerCrop"
+                            />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
-                            android:id="@+id/ad_body_alt2"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginStart="100dp"
+                            android:layout_width="141dp"
+                            android:layout_height="94dp"
                             android:layout_gravity="center"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
                             android:textSize="16sp" />
 
@@ -598,33 +578,38 @@
                         <!-- Reklam Başlığı -->
                         <TextView
                             android:id="@+id/ad_headline_alt3"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="wrap_content"
+                            android:layout_width="159dp"
+                            android:layout_height="37dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginStart="100dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp"
+/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt3"
-                            android:layout_width="190dp"
-                            android:layout_height="150dp"
-                            android:layout_marginStart="10dp"
-                            android:scaleType="centerCrop" />
+                            android:layout_width="190sp"
+                            android:layout_height="130sp"
+                            android:layout_margin="10dp"
+                            android:scaleType="centerCrop"  />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt3"
-                            android:layout_width="200dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginStart="100dp"
+
+                            android:layout_width="141dp"
+                            android:layout_height="94dp"
                             android:layout_gravity="center"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nerko_one"
                             android:textColor="@android:color/white"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+
+
+                            />
 
                         <!-- Reklamın diğer bileşenlerini buraya ekleyebilirsiniz -->
                     </com.google.android.gms.ads.nativead.NativeAdView>
