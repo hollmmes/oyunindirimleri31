@@ -142,6 +142,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:layout_marginTop="30sp"
                             android:id="@+id/ad_app_icon_yan1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -204,6 +205,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:layout_marginTop="30sp"
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
                             android:contentDescription="@string/ad_icon_description"

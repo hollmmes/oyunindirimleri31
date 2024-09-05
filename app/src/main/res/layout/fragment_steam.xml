@@ -156,7 +156,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
-
+                            android:layout_marginTop="30sp"
                             android:id="@+id/ad_app_icon_yan1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -268,6 +268,7 @@
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:contentDescription="@string/ad_icon_description"
+                            android:layout_marginTop="30sp"
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -883,22 +884,5 @@
 
 
     </ScrollView>
-
-        <ScrollView
-            android:id="@+id/vertical_dashboard_scroll2025"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/year2025"
-            android:layout_marginTop="16dp"
-            android:padding="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"/>
-        </ScrollView>
-
-
-
     </LinearLayout>
 </ScrollView>
