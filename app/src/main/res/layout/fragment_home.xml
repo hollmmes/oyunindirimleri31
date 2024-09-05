@@ -153,11 +153,12 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+
                             android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_app_icon_alt1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="50dp"
+                            android:layout_marginTop="55dp"
 />
 
 

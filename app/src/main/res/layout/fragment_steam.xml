@@ -127,7 +127,6 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="16dp"
-                app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
                 app:cardBackgroundColor="@color/nav_bar_color">
 
@@ -148,7 +147,7 @@
                             android:id="@+id/ad_headline_yan1"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
-                            android:layout_height="30dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
                             android:contentDescription="@string/ad_icon_description"
@@ -156,7 +155,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
-                            android:layout_marginTop="30sp"
+                            android:layout_marginTop="50sp"
                             android:id="@+id/ad_app_icon_yan1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -238,7 +237,6 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginEnd="16dp"
-                app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
                 app:cardBackgroundColor="@color/nav_bar_color">
 
@@ -259,7 +257,7 @@
                             android:id="@+id/ad_headline_yan2"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
-                            android:layout_height="30dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
                             android:contentDescription="@string/ad_icon_description"
@@ -268,7 +266,7 @@
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:contentDescription="@string/ad_icon_description"
-                            android:layout_marginTop="30sp"
+                            android:layout_marginTop="50sp"
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
