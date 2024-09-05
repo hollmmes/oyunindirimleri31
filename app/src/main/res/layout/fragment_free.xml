@@ -92,6 +92,7 @@
                         android:layout_height="match_parent"
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView1"
+                        android:contentDescription="@string/ad_icon_description"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
                         ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
@@ -153,6 +154,7 @@
                     <com.google.android.gms.ads.AdView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/ad_icon_description"
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView"
                         android:layout_gravity="center"
@@ -171,10 +173,12 @@
                     <com.google.android.gms.ads.nativead.NativeAdView
                         android:id="@+id/native_ad_view_alt1"
                         android:layout_width="match_parent"
+                        android:contentDescription="@string/ad_icon_description"
                         android:layout_height="match_parent">
 
                         <!-- Reklam Başlığı -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_headline_alt1"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
@@ -185,6 +189,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_app_icon_alt1"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
@@ -264,6 +269,7 @@
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView2"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/ad_icon_description"
                         ads:adSize="BANNER"
                         ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
@@ -286,6 +292,7 @@
                         <TextView
                             android:id="@+id/ad_headline_alt2"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -294,6 +301,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_app_icon_alt2"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
@@ -301,6 +309,7 @@
 
                         <!-- Reklam Açıklaması -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_body_alt2"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"

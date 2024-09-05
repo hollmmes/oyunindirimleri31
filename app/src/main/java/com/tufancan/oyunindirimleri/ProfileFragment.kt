@@ -160,32 +160,41 @@ class ProfileFragment : Fragment() {
     private fun loadRewardedAd() {
         val adRequest = AdRequest.Builder().build()
 
-        RewardedAd.load(
-            requireContext(),
-            "ca-app-pub-4574441267168225/3835522081",
-            adRequest,
-            object : RewardedAdLoadCallback() {
-                override fun onAdFailedToLoad(adError: LoadAdError) {
-                    rewardedAd = null
-                    Toast.makeText(requireContext(), "Failed to load rewarded ad", Toast.LENGTH_SHORT).show()
-                }
+        if (isAdded) {
+            RewardedAd.load(
+                requireContext(),
+                "ca-app-pub-4574441267168225/3835522081",
+                adRequest,
+                object : RewardedAdLoadCallback() {
+                    override fun onAdFailedToLoad(adError: LoadAdError) {
+                        rewardedAd = null
+                        if (isAdded) {
+                            Toast.makeText(requireContext(), "lütfen tekrar deneyiniz", Toast.LENGTH_SHORT).show()
+                        }
+                    }
 
-                override fun onAdLoaded(ad: RewardedAd) {
-                    rewardedAd = ad
+                    override fun onAdLoaded(ad: RewardedAd) {
+                        rewardedAd = ad
+                    }
                 }
-            }
-        )
+            )
+        }
     }
 
     private fun showRewardedAd() {
-        rewardedAd?.let { ad ->
-            ad.show(requireActivity(), OnUserEarnedRewardListener {
+        if (rewardedAd != null && isAdded) {
+            rewardedAd?.show(requireActivity(), OnUserEarnedRewardListener {
                 // Handle the reward
-                Toast.makeText(requireContext(), "Çekilişe Katıldınız!", Toast.LENGTH_SHORT).show()
-                saveDataToFirebase()
-
+                if (isAdded) {
+                    Toast.makeText(requireContext(), "Çekilişe Katıldınız!", Toast.LENGTH_SHORT).show()
+                    saveDataToFirebase()
+                }
             })
-        } ?: Toast.makeText(requireContext(), "Lütfen reklamın tamamını izleyiniz.", Toast.LENGTH_SHORT).show()
+        } else {
+            if (isAdded) {
+                Toast.makeText(requireContext(), "Lütfen reklamın tamamını izleyiniz.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
     private fun saveDataToFirebase() {
         // Retrieve the values from adrescekilis1 and adrescekilis2 (assuming they are TextViews)

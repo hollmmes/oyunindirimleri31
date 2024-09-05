@@ -165,6 +165,7 @@
                     <com.google.android.gms.ads.AdView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/ad_icon_description"
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView"
                         android:layout_gravity="center"
@@ -189,6 +190,7 @@
 
                         <!-- Reklam Başlığı -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_headline_alt1"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
@@ -200,6 +202,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_app_icon_alt1"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
@@ -207,6 +210,7 @@
 
                         <!-- Reklam Açıklaması -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_body_alt1"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"

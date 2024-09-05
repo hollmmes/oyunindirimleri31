@@ -142,12 +142,14 @@
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="30dp"
                             android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/ad_icon_description"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_yan1"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop" />
@@ -208,6 +210,7 @@
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="30dp"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"/>
@@ -216,6 +219,7 @@
                         <ImageView
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop" />
 
@@ -353,6 +357,7 @@
                         <TextView
                             android:id="@+id/ad_headline_alt1"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -362,7 +367,7 @@
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt1"
-
+                            android:contentDescription="@string/ad_icon_description"
 
                             android:layout_width="160sp"
                             android:layout_height="160sp"
@@ -371,7 +376,7 @@
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt1"
-
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="end"
@@ -487,6 +492,7 @@
                         <TextView
                             android:id="@+id/ad_headline_alt2"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
@@ -495,6 +501,7 @@
 
                         <!-- Reklam İkonu -->
                         <ImageView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_app_icon_alt2"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
@@ -503,6 +510,7 @@
 
                         <!-- Reklam Açıklaması -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_body_alt2"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
@@ -589,6 +597,7 @@
                         <!-- Reklam Başlığı -->
                         <TextView
                             android:id="@+id/ad_headline_alt3"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
@@ -600,7 +609,7 @@
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt3"
-
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
                             android:layout_gravity="bottom" />
@@ -608,7 +617,7 @@
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt3"
-
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="end"

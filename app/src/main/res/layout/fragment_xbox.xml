@@ -133,6 +133,7 @@
                         <TextView
                             android:id="@+id/ad_headline_yan1"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="30dp"
                             android:layout_gravity="center_horizontal"
@@ -144,6 +145,7 @@
                             android:id="@+id/ad_app_icon_yan1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:scaleType="centerCrop" />
 
 
@@ -197,12 +199,14 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
+                            android:contentDescription="@string/ad_icon_description"
                             android:textSize="16sp"/>
 
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_yan2"
                             android:layout_width="match_parent"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop" />
 
@@ -317,6 +321,7 @@
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView"
                         android:layout_gravity="center"
+                        android:contentDescription="@string/ad_icon_description"
                         ads:adSize="BANNER"
                         ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
@@ -342,6 +347,7 @@
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/ad_icon_description"
                             android:textColor="@android:color/white"
                             android:textSize="22sp"/>
 
@@ -349,12 +355,14 @@
                         <ImageView
                             android:id="@+id/ad_app_icon_alt1"
                             android:layout_width="160sp"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_height="160sp"
                             android:layout_gravity="bottom" />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt1"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="end"
@@ -445,6 +453,7 @@
                         android:layout_height="match_parent"
                         xmlns:ads="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/adView1"
+                        android:contentDescription="@string/ad_icon_description"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
                         ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
@@ -470,6 +479,7 @@
                             android:id="@+id/ad_headline_alt2"
                             android:layout_width="match_parent"
                             android:fontFamily="@font/nerko_one"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textColor="@android:color/white"
@@ -478,13 +488,14 @@
                         <!-- Reklam İkonu -->
                         <ImageView
                             android:id="@+id/ad_app_icon_alt2"
-
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
                             android:layout_gravity="bottom" />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
+                            android:contentDescription="@string/ad_icon_description"
                             android:id="@+id/ad_body_alt2"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
@@ -548,6 +559,7 @@
                         android:id="@+id/adView2"
                         android:layout_gravity="center"
                         ads:adSize="BANNER"
+                        android:contentDescription="@string/ad_icon_description"
                         ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
                         />
 
@@ -574,6 +586,7 @@
                             android:fontFamily="@font/nerko_one"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/ad_icon_description"
                             android:textColor="@android:color/white"
                             android:textSize="22sp"/>
 
@@ -582,12 +595,13 @@
                             android:id="@+id/ad_app_icon_alt3"
                             android:layout_width="160sp"
                             android:layout_height="160sp"
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_gravity="bottom" />
 
                         <!-- Reklam Açıklaması -->
                         <TextView
                             android:id="@+id/ad_body_alt3"
-
+                            android:contentDescription="@string/ad_icon_description"
                             android:layout_width="175dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="end"
