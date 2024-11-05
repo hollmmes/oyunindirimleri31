@@ -13,10 +13,8 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 import coil.load
-import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.nativead.NativeAdView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import android.app.AlertDialog
@@ -87,31 +85,7 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        // NativeAdView nesnesini bulun
-        val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
-        // AdLoader ile reklamı yükleyin
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-4574441267168225/5135327162")
-            .forNativeAd { nativeAd ->
-                // Reklamın başlığını ayarlayın
-                nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
-                (nativeAdView1.headlineView as TextView).text = nativeAd.headline
 
-                // Reklamın ikonunu ayarlayın
-                nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
-
-                if (nativeAd.icon != null) {
-                    (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
-
-                }
-                // Reklamın açıklamasını ayarlayın
-                nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
-                (nativeAdView1.bodyView as TextView).text = nativeAd.body
-                // Native reklamı yerleştirin
-                nativeAdView1.setNativeAd(nativeAd)
-
-            }
-            .build()
-        adLoader.loadAd(AdRequest.Builder().build())
 
         mAdview = view.findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
@@ -134,25 +108,6 @@ class ProfileFragment : Fragment() {
             showRewardedAd()
         }
 
-        // Bildirimleri Aktifleştir butonunu bulun ve tıklama olayını ayarlayın
-        val bildirimButton: Button = view.findViewById(R.id.bildirim)
-        bildirimButton.setOnClickListener {
-            val builder = AlertDialog.Builder(requireContext())
-            builder.setTitle("Bildirimleri Etkinleştirme")
-            builder.setMessage("Bildirimleri etkinleştirmek istiyor musunuz?")
-
-            builder.setPositiveButton("Evet") { dialog, _ ->
-                // Bildirimleri etkinleştirme kodu buraya gelecek
-                Toast.makeText(requireContext(), "Bildirimler etkinleştirildi", Toast.LENGTH_SHORT).show()
-                dialog.dismiss()
-            }
-
-            builder.setNegativeButton("Hayır") { dialog, _ ->
-                dialog.dismiss() // Sadece dialogu kapat
-            }
-
-            builder.create().show()
-        }
 
         return view
     }

@@ -31,7 +31,6 @@ class HomeFragment : Fragment() {
         val psnCardView: CardView = view.findViewById(R.id.psn)
         val xboxCardView: CardView = view.findViewById(R.id.xbox)
         val null1CardView: CardView = view.findViewById(R.id.null1)
-        val null2CardView: CardView = view.findViewById(R.id.null2)
         // Set a click listener on the steam CardView
         steamCardView.setOnClickListener {
             // Use the Navigation component to navigate to SteamFragment
@@ -55,11 +54,7 @@ class HomeFragment : Fragment() {
             // Use the Navigation component to navigate to SteamFragment
             findNavController().navigate(R.id.action_homeFragment_to_nullFragment)
         }
-        null2CardView.setOnClickListener {
 
-            findNavController().navigate(R.id.action_homeFragment_to_nullFragment)
-
-        }
 
         // NativeAdView nesnesini bulun
         val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)

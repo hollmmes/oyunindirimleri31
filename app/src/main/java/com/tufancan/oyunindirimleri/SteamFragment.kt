@@ -1,6 +1,5 @@
 package com.tufancan.oyunindirimleri
 
-import android.media.Image
 import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -114,11 +113,11 @@ class SteamFragment : Fragment() {
         val ver_imageview8: ImageView = view.findViewById(R.id.vertical_item_image_8)
         val ver_imageview9: ImageView = view.findViewById(R.id.vertical_item_image_9)
 
-        ver_imageview1.load("https://steamdb.info/static/img/blog/1/52a8bb8666c98fba0dcfd318e455df3698778253.png")
-        ver_imageview2.load("https://steamdb.info/static/img/blog/1/ee1b420a8fa47c8795e791a05c6c0056c0e569a6.png")
-        ver_imageview3.load("https://steamdb.info/static/img/blog/1/103b4210791d88a2f39532cd8983880fa1c28e51.png")
+        ver_imageview1.load("https://clan.cloudflare.steamstatic.com/images/27766192/2a9641b94ef236eb7f3302403d1d2c9c5c654a86.jpg")
+        ver_imageview2.load("https://clan.cloudflare.steamstatic.com/images/27766192/af98d68baf15704eefef6e3b2c7cf53504a77138.jpg")
+        ver_imageview3.load("https://clan.cloudflare.steamstatic.com/images/27766192/5879583cfe9552d4bc3ccc3fbc1fdb7ee4ef9ed7.jpg")
         ver_imageview5.load("https://clan.cloudflare.steamstatic.com/images/39049601/b19e87424a7474164d3f7fcc46763cfecf1ee78b.jpg")
-        ver_imageview6.load("https://steamdb.info/static/img/sales/generic.webp")
+        ver_imageview6.load("https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/3257180/abce633aa8ba0492483acaf2438bc5f45e755b34.jpg")
         ver_imageview7.load("https://steamdb.info/static/img/blog/1/9b17026346a121af8eed4240892392182d90b6cc.png")
         ver_imageview8.load("https://steamdb.info/static/img/sales/autumn.webp")
         ver_imageview9.load("https://steamdb.info/static/img/sales/winter.webp")

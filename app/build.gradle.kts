@@ -10,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId = "com.tufancan.oyunindirimleri"
-        minSdk = 27
+        minSdk = 25
         targetSdk = 34
-        versionCode = 6
-        versionName = "1.6"
+        versionCode = 21
+        versionName = "3.3131"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,8 +33,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-
-
     }
 
     kotlinOptions {
@@ -43,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
     implementation (libs.google.firebase.analytics)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
@@ -63,5 +62,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 
 }
