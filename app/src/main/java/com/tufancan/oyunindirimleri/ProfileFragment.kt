@@ -68,7 +68,6 @@ class ProfileFragment : Fragment() {
         database = FirebaseDatabase.getInstance().getReference("cekiliyap")
 
         val vertical_item_image_cekilis1: ImageView = view.findViewById(R.id.vertical_item_image_cekilis1)
-        val vertical_item_image_cekilis2: ImageView = view.findViewById(R.id.vertical_item_image_cekilis2)
 
         // Firebase'den URL'leri çekin ve ImageView'lere yükleyin
         database.child("cekbakalim1").get().addOnSuccessListener { dataSnapshot ->
@@ -78,12 +77,6 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        database.child("cekbakalim2").get().addOnSuccessListener { dataSnapshot ->
-            val imageUrl2 = dataSnapshot.getValue(String::class.java)
-            if (!imageUrl2.isNullOrEmpty()) {
-                vertical_item_image_cekilis2.load(imageUrl2)
-            }
-        }
 
 
 
@@ -102,12 +95,6 @@ class ProfileFragment : Fragment() {
         }
 
         // Set up dogrula_button1 click event
-        val dogrulaButton1: Button = view.findViewById(R.id.dogrula_button1)
-        dogrulaButton1.setOnClickListener {
-            loadRewardedAd()
-            showRewardedAd()
-        }
-
 
         return view
     }
@@ -154,12 +141,10 @@ class ProfileFragment : Fragment() {
     private fun saveDataToFirebase() {
         // Retrieve the values from adrescekilis1 and adrescekilis2 (assuming they are TextViews)
         val adrescekilis1Text = view?.findViewById<TextView>(R.id.adrescekilis1)?.text.toString()
-        val adrescekilis2Text = view?.findViewById<TextView>(R.id.adrescekilis2)?.text.toString()
 
         // Save the values to Firebase
         val dataMap = mapOf(
             "adrescekilis1" to adrescekilis1Text,
-            "adrescekilis2" to adrescekilis2Text
         )
 
         database.child("cekilisKatilim").push().setValue(dataMap)

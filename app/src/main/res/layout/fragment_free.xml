@@ -193,28 +193,6 @@
                     </com.google.android.gms.ads.nativead.NativeAdView>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/nav_bar_color">
-
-
-                    <com.google.android.gms.ads.AdView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        xmlns:ads="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/adView2"
-                        android:layout_gravity="center"
-                        android:contentDescription="@string/ad_icon_description"
-                        ads:adSize="BANNER"
-                        ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
-                        />
-
-                </androidx.cardview.widget.CardView>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

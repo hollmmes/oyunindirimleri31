@@ -118,9 +118,7 @@ class FreeFragment : Fragment() {
         adLoader.loadAd(AdRequest.Builder().build())
 
         mAdview3 = view.findViewById(R.id.adView1)
-        mAdview2 = view.findViewById(R.id.adView2)
         val adRequest = AdRequest.Builder().build()
-        mAdview2.loadAd(adRequest)
         mAdview3.loadAd(adRequest)
         return view
 

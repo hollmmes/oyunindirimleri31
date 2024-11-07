@@ -62,6 +62,16 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </androidx.media3.ui.PlayerView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/ad_icon_description"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-4574441267168225/3510623411" />
+
         <Button
             android:fontFamily="@font/nerko_one"
             android:textColor="@color/white"
@@ -148,83 +158,6 @@
                             android:layout_height="wrap_content"
                             android:text="Doğrula"
                             android:id="@+id/dogrula_button0"
-                            android:backgroundTint="@color/nav_bar_color"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/nerko_one"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/nav_bar_color">
-
-
-                    <com.google.android.gms.ads.AdView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:contentDescription="@string/ad_icon_description"
-                        xmlns:ads="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/adView"
-                        android:layout_gravity="center"
-                        ads:adSize="BANNER"
-                        ads:adUnitId= "ca-app-pub-4574441267168225/3510623411"
-                        />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/nav_bar_color">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:background="@color/semiTransparentBlack"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/vertical_item_image_cekilis2"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:layout_gravity="bottom"
-                            android:scaleType="centerCrop"
-                            />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:background="@color/nav_bar_color"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        >
-
-                        <EditText
-                            android:id="@+id/adrescekilis2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:hint="Size Ulaşabileceğimiz Adres"
-                            android:textColorHint="@color/white"
-                            android:textColor="@color/white"
-                            android:layout_marginEnd="8dp"
-                            android:fontFamily="@font/nerko_one"
-                            android:textSize="22sp"/>
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Doğrula"
-                            android:id="@+id/dogrula_button1"
                             android:backgroundTint="@color/nav_bar_color"
                             android:textColor="@color/white"
                             android:fontFamily="@font/nerko_one"/>

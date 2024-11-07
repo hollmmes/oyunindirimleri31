@@ -12,8 +12,8 @@ android {
         applicationId = "com.tufancan.oyunindirimleri"
         minSdk = 25
         targetSdk = 34
-        versionCode = 21
-        versionName = "3.3131"
+        versionCode = 25
+        versionName = "2024.4.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

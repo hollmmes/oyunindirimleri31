@@ -47,7 +47,7 @@ class PsnFragment : Fragment() {
         playerView.isClickable = false
 
         // Prepare the media item
-        val mediaItem = MediaItem.fromUri(Uri.parse("https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/601220/ab101a835aa5fd4d2643b057281362faa75abeaf.mp4"))
+        val mediaItem = MediaItem.fromUri(Uri.parse("https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1385730/cffa15af0b6d0ebcd58af7eced0da8dd69742496.mp4"))
         player?.setMediaItem(mediaItem)
 
         // Enable looping
@@ -59,7 +59,7 @@ class PsnFragment : Fragment() {
 
         // Set the sale title text programmatically
         val saleTitle = view.findViewById<TextView>(R.id.sale_title)
-        saleTitle.text = "Cadılar Bayramı İndirimi\n 16 Ekim – 30 Ekim 2024"
+        saleTitle.text = "Kış İndirimi\n 11 Aralık – 2 Ocak 2025"
 
         // Set up the countdown timer
         countdownTimer = view.findViewById(R.id.countdown_timer)
@@ -93,8 +93,6 @@ class PsnFragment : Fragment() {
         ver_imageview5.load("https://blog.playstation.com/tachyon/2023/12/c722f6b1a06cc9f321b81776833d09d990ad1a49.jpeg")
         // NativeAdView nesnesini bulun
         val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
-        val nativeAdView2 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt2)
-        val nativeAdView3 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt3)
         val nativeAdView_yan1 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan1)
         val nativeAdView_yan2 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan2)
         // AdLoader ile reklamı yükleyin
@@ -104,11 +102,6 @@ class PsnFragment : Fragment() {
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
                 (nativeAdView1.headlineView as TextView).text = nativeAd.headline
 
-                nativeAdView2.headlineView = nativeAdView2.findViewById(R.id.ad_headline_alt2)
-                (nativeAdView2.headlineView as TextView).text = nativeAd.headline
-
-                nativeAdView3.headlineView = nativeAdView3.findViewById(R.id.ad_headline_alt3)
-                (nativeAdView3.headlineView as TextView).text = nativeAd.headline
 
                 nativeAdView_yan1.headlineView = nativeAdView_yan1.findViewById(R.id.ad_headline_yan1)
                 (nativeAdView_yan1.headlineView as TextView).text = nativeAd.headline
@@ -120,14 +113,10 @@ class PsnFragment : Fragment() {
 
                 // Reklamın ikonunu ayarlayın
                 nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
-                nativeAdView2.iconView = nativeAdView2.findViewById(R.id.ad_app_icon_alt2)
-                nativeAdView3.iconView = nativeAdView3.findViewById(R.id.ad_app_icon_alt3)
                 nativeAdView_yan1.iconView = nativeAdView_yan1.findViewById(R.id.ad_app_icon_yan1)
                 nativeAdView_yan2.iconView = nativeAdView_yan2.findViewById(R.id.ad_app_icon_yan2)
                 if (nativeAd.icon != null) {
                     (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
-                    (nativeAdView2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
-                    (nativeAdView3.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
                     (nativeAdView_yan1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
                     (nativeAdView_yan2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
 
@@ -138,12 +127,6 @@ class PsnFragment : Fragment() {
                 nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
                 (nativeAdView1.bodyView as TextView).text = nativeAd.body
 
-                nativeAdView2.bodyView = nativeAdView2.findViewById(R.id.ad_body_alt2)
-                (nativeAdView2.bodyView as TextView).text = nativeAd.body
-
-                nativeAdView3.bodyView = nativeAdView3.findViewById(R.id.ad_body_alt3)
-                (nativeAdView3.bodyView as TextView).text = nativeAd.body
-
 
 
 
@@ -152,8 +135,6 @@ class PsnFragment : Fragment() {
 
                 // Native reklamı yerleştirin
                 nativeAdView1.setNativeAd(nativeAd)
-                nativeAdView2.setNativeAd(nativeAd)
-                nativeAdView3.setNativeAd(nativeAd)
                 nativeAdView_yan1.setNativeAd(nativeAd)
                 nativeAdView_yan2.setNativeAd(nativeAd)
 
@@ -167,14 +148,9 @@ class PsnFragment : Fragment() {
 
 
         mAdview = view.findViewById(R.id.adView)
-        mAdview2 = view.findViewById(R.id.adView1)
-        mAdview3 = view.findViewById(R.id.adView2)
-
 
         val adRequest = AdRequest.Builder().build()
         mAdview.loadAd(adRequest)
-        mAdview2.loadAd(adRequest)
-        mAdview3.loadAd(adRequest)
 
         return view
     }
@@ -182,7 +158,7 @@ class PsnFragment : Fragment() {
     private fun startCountdown() {
         // Set the target date to 27 November 2024
         val targetDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-            .parse("2024-10-16 00:00:00")?.time ?: return
+            .parse("2024-12-11 00:00:00")?.time ?: return
 
         val currentTime = System.currentTimeMillis()
         val timeDifference = targetDate - currentTime

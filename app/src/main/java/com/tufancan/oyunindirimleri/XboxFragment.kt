@@ -46,7 +46,7 @@ class XboxFragment : Fragment() {
         playerView.isClickable = false
 
         // Prepare the media item
-        val mediaItem = MediaItem.fromUri(Uri.parse("https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1465660/7345fd62bd4d80da5a91586edc1373a1303662d4.mp4"))
+        val mediaItem = MediaItem.fromUri(Uri.parse("https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1037910/6211b7c86e1c261efaff1c7f0a4a278f0e1a6ac8.mp4"))
         player?.setMediaItem(mediaItem)
 
         // Enable looping
@@ -58,7 +58,7 @@ class XboxFragment : Fragment() {
 
         // Set the sale title text programmatically
         val saleTitle = view.findViewById<TextView>(R.id.sale_title)
-        saleTitle.text = "Cadılar Bayramı İndirimi\n 17 Ekim – 31 Kasım 2024"
+        saleTitle.text = "Yeni Yıl İndirimi\n 15 Aralık – 5 Ocak 2025"
 
         // Set up the countdown timer
         countdownTimer = view.findViewById(R.id.countdown_timer)
@@ -86,8 +86,6 @@ class XboxFragment : Fragment() {
         ver_imageview5.load("https://ukstories.microsoft.com/wp-content/uploads/2022/11/Xbox-holiday-image.jpeg")
         // NativeAdView nesnesini bulun
         val nativeAdView1 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt1)
-        val nativeAdView2 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt2)
-        val nativeAdView3 = view.findViewById<NativeAdView>(R.id.native_ad_view_alt3)
         val nativeAdView_yan1 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan1)
         val nativeAdView_yan2 = view.findViewById<NativeAdView>(R.id.native_ad_view_yan2)
         // AdLoader ile reklamı yükleyin
@@ -97,11 +95,6 @@ class XboxFragment : Fragment() {
                 nativeAdView1.headlineView = nativeAdView1.findViewById(R.id.ad_headline_alt1)
                 (nativeAdView1.headlineView as TextView).text = nativeAd.headline
 
-                nativeAdView2.headlineView = nativeAdView2.findViewById(R.id.ad_headline_alt2)
-                (nativeAdView2.headlineView as TextView).text = nativeAd.headline
-
-                nativeAdView3.headlineView = nativeAdView3.findViewById(R.id.ad_headline_alt3)
-                (nativeAdView3.headlineView as TextView).text = nativeAd.headline
 
                 nativeAdView_yan1.headlineView = nativeAdView_yan1.findViewById(R.id.ad_headline_yan1)
                 (nativeAdView_yan1.headlineView as TextView).text = nativeAd.headline
@@ -113,14 +106,10 @@ class XboxFragment : Fragment() {
 
                 // Reklamın ikonunu ayarlayın
                 nativeAdView1.iconView = nativeAdView1.findViewById(R.id.ad_app_icon_alt1)
-                nativeAdView2.iconView = nativeAdView2.findViewById(R.id.ad_app_icon_alt2)
-                nativeAdView3.iconView = nativeAdView3.findViewById(R.id.ad_app_icon_alt3)
                 nativeAdView_yan1.iconView = nativeAdView_yan1.findViewById(R.id.ad_app_icon_yan1)
                 nativeAdView_yan2.iconView = nativeAdView_yan2.findViewById(R.id.ad_app_icon_yan2)
                 if (nativeAd.icon != null) {
                     (nativeAdView1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
-                    (nativeAdView2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
-                    (nativeAdView3.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
                     (nativeAdView_yan1.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
                     (nativeAdView_yan2.iconView as ImageView).setImageDrawable(nativeAd.icon!!.drawable)
 
@@ -131,11 +120,6 @@ class XboxFragment : Fragment() {
                 nativeAdView1.bodyView = nativeAdView1.findViewById(R.id.ad_body_alt1)
                 (nativeAdView1.bodyView as TextView).text = nativeAd.body
 
-                nativeAdView2.bodyView = nativeAdView2.findViewById(R.id.ad_body_alt2)
-                (nativeAdView2.bodyView as TextView).text = nativeAd.body
-
-                nativeAdView3.bodyView = nativeAdView3.findViewById(R.id.ad_body_alt3)
-                (nativeAdView3.bodyView as TextView).text = nativeAd.body
 
 
 
@@ -145,8 +129,6 @@ class XboxFragment : Fragment() {
 
                 // Native reklamı yerleştirin
                 nativeAdView1.setNativeAd(nativeAd)
-                nativeAdView2.setNativeAd(nativeAd)
-                nativeAdView3.setNativeAd(nativeAd)
                 nativeAdView_yan1.setNativeAd(nativeAd)
                 nativeAdView_yan2.setNativeAd(nativeAd)
 
@@ -160,14 +142,9 @@ class XboxFragment : Fragment() {
 
 
         mAdview = view.findViewById(R.id.adView)
-        mAdview2 = view.findViewById(R.id.adView1)
-        mAdview3 = view.findViewById(R.id.adView2)
-
 
         val adRequest = AdRequest.Builder().build()
         mAdview.loadAd(adRequest)
-        mAdview2.loadAd(adRequest)
-        mAdview3.loadAd(adRequest)
 
         return view
     }
@@ -175,7 +152,7 @@ class XboxFragment : Fragment() {
     private fun startCountdown() {
         // Set the target date to 27 November 2024
         val targetDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-            .parse("2024-10-17 03:00:00")?.time ?: return
+            .parse("2024-12-15 03:00:00")?.time ?: return
 
         val currentTime = System.currentTimeMillis()
         val timeDifference = targetDate - currentTime
